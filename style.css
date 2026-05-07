@@ -1,0 +1,469 @@
+
+/* =========================================
+   ACADEMIA DE INSURGÊNCIA ARY'GOLDIA
+   CSS OFICIAL - RPG PIXEL FANTASY
+   ========================================= */
+
+/* ================================
+   RESET GLOBAL
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   BODY
+   ================================ */
+body {
+    font-family: 'Cinzel', serif;
+    background:
+        radial-gradient(circle at top, rgba(60, 90, 180, 0.15), transparent 35%),
+        linear-gradient(to bottom, #0b1020, #151d36, #24180c);
+    color: #f5e6c8;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ================================
+   IMAGENS GERAIS
+   ================================ */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px clamp(20px, 5vw, 50px);
+
+    background: linear-gradient(
+        to right,
+        rgba(8, 15, 40, 0.97),
+        rgba(20, 35, 80, 0.96),
+        rgba(92, 63, 18, 0.95)
+    );
+
+    border-bottom: 3px solid #d4af37;
+
+    box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.4),
+        0 0 35px rgba(80, 120, 255, 0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ================================
+   LOGO
+   ================================ */
+.logo {
+    width: 140px;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 100, 0.7));
+    animation: brilhoLogo 3s infinite alternate;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+@keyframes brilhoLogo {
+    from {
+        filter: drop-shadow(0 0 8px gold);
+    }
+
+    to {
+        filter: drop-shadow(0 0 18px #5dade2);
+    }
+}
+
+/* ================================
+   TÍTULO
+   ================================ */
+header h1 {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: clamp(1.4rem, 3vw, 2.7rem);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    background: linear-gradient(to bottom, #ffffff, #f7d774, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 8px rgba(255, 223, 120, 0.45),
+        0 0 15px rgba(80, 140, 255, 0.25);
+}
+
+/* ================================
+   NAV
+   ================================ */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5e6c8;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    padding: 8px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+
+    border-color: rgba(255, 215, 0, 0.6);
+
+    background: rgba(255, 215, 0, 0.08);
+
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.25),
+        0 0 15px rgba(100, 180, 255, 0.15);
+}
+
+/* ================================
+   MAIN
+   ================================ */
+main {
+    width: 100%;
+}
+
+/* ================================
+   CARROSSEL
+   ================================ */
+.carrossel {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    padding: clamp(15px, 2vw, 40px);
+
+    background:
+        linear-gradient(to bottom, rgba(10,16,32,0.4), rgba(15,20,35,0.75));
+}
+
+/* Container */
+.slides {
+    position: relative;
+
+    width: min(70vw, 1100px);
+    max-width: 100%;
+
+    border: clamp(2px, 0.3vw, 4px) solid #d4af37;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 20px rgba(212, 175, 55, 0.25),
+        0 0 35px rgba(40, 90, 255, 0.12);
+}
+
+/* Imagem base define tamanho */
+.slides img:first-child {
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
+/* Todas */
+.slides img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    animation: fadeCarousel 18s infinite;
+
+    transition:
+        transform 0.8s ease,
+        opacity 0.8s ease;
+}
+
+/* Delays */
+.slides img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slides img:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.slides img:nth-child(3) {
+    animation-delay: 12s;
+}
+
+/* Zoom */
+.slides:hover img {
+    transform: scale(1.02);
+}
+
+/* Fade */
+@keyframes fadeCarousel {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    30% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Moldura interna */
+.slides::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border: 2px solid rgba(255, 223, 120, 0.18);
+    border-radius: inherit;
+
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* ================================
+   BOTÕES CARROSSEL
+   ================================ */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(10, 15, 40, 0.75);
+    color: gold;
+
+    border: 2px solid rgba(212,175,55,0.7);
+    border-radius: 50%;
+
+    width: 50px;
+    height: 50px;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(25, 35, 75, 0.95);
+    box-shadow: 0 0 15px rgba(255,215,0,0.35);
+}
+
+.prev {
+    left: 5%;
+}
+
+.next {
+    right: 5%;
+}
+
+/* ================================
+   SEÇÕES
+   ================================ */
+.lore,
+.mapa,
+.sobre {
+    padding: 80px clamp(5%, 12%, 15%);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.lore h2,
+.mapa h2,
+.sobre h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    margin-bottom: 25px;
+
+    color: #f7d774;
+
+    text-shadow:
+        0 0 10px rgba(255,215,0,0.25);
+}
+
+.lore p {
+    max-width: 900px;
+    margin: auto;
+
+    line-height: 1.9;
+    font-size: 1.1rem;
+
+    color: #f3e7cb;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 2px solid rgba(212,175,55,0.35);
+
+    background: rgba(8, 12, 28, 0.95);
+
+    font-size: 0.95rem;
+    color: rgba(245, 230, 200, 0.75);
+}
+
+/* ================================
+   RESPONSIVIDADE
+   ================================ */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        padding: 20px clamp(15px, 5vw, 30px);
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .prev,
+    .next {
+        width: 42px;
+        height: 42px;
+    }
+
+    .lore,
+    .mapa,
+    .sobre {
+        padding: 70px clamp(4%, 8%, 10%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .slides {
+        width: min(95vw, 100%);
+        border-radius: 10px;
+    }
+
+    .prev,
+    .next {
+        display: none;
+    }
+
+    .lore,
+    .mapa,
+    .sobre {
+        padding: 60px clamp(3%, 5%, 8%);
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px clamp(10px, 4vw, 20px);
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    header h1 {
+        letter-spacing: 1px;
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 5px 6px;
+    }
+
+    .lore,
+    .mapa,
+    .sobre {
+        padding: 40px clamp(2%, 4%, 6%);
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 10px clamp(5px, 3vw, 15px);
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    header h1 {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 4px 5px;
+    }
+
+    .carrossel {
+        padding: clamp(5px, 1vw, 10px);
+    }
+
+    .slides {
+        width: 100vw;
+        border-radius: 5px;
+    }
+
+    .lore,
+    .mapa,
+    .sobre {
+        padding: 30px clamp(1%, 3%, 5%);
+    }
+}
+
