@@ -297,6 +297,44 @@ main {
     color: var(--text-muted);
 }
 
+/* Chamada */
+.chamada {
+    padding: 80px clamp(5%, 12%, 15%);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.chamada .imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.chamada .imagens img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.chamada .imagem-container p {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chamada h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 40px;
+    color: var(--secondary-gold);
+    text-shadow: 0 0 10px rgba(255,215,0,0.25);
+}
+
 /* ================================
    FOOTER
    ================================ */
@@ -336,6 +374,10 @@ footer {
     .sobre {
         padding: 70px clamp(4%, 8%, 10%);
     }
+
+    .chamada {
+        padding: 70px clamp(4%, 8%, 10%);
+    }
 }
 
 @media (max-width: 768px) {
@@ -355,6 +397,14 @@ footer {
         padding: 60px clamp(3%, 5%, 8%);
         margin: 0 auto;
         max-width: 100%;
+    }
+
+    .chamada {
+        padding: 60px clamp(3%, 5%, 8%);
+    }
+
+    .chamada .imagens {
+        gap: 30px;
     }
 }
 
@@ -384,6 +434,10 @@ footer {
     .lore,
     .mapa,
     .sobre {
+        padding: 40px clamp(2%, 4%, 6%);
+    }
+
+    .chamada {
         padding: 40px clamp(2%, 4%, 6%);
     }
 }
@@ -423,6 +477,10 @@ footer {
     .lore,
     .mapa,
     .sobre {
+        padding: 30px clamp(1%, 3%, 5%);
+    }
+
+    .chamada {
         padding: 30px clamp(1%, 3%, 5%);
     }
 }
