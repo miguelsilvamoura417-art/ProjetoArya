@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma como português brasileiro -->
+
+<head>
+    <!-- Seção de configuração (não visível) -->
+    <meta charset="UTF-8">
+    <!-- Define codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna responsivo para celulares -->
+    <meta name="description" content="Mapa interativo da Academia Ary'Goldia">
+    <!-- Descrição para buscadores -->
+    <meta name="author" content="Miguel Silva">
+    <!-- Autor da página -->
+    <title>Mapa Interativo - Academia de Insurgência Ary'Goldia</title>
+    <!-- Título da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importa fonte Cinzel -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa estilos globais -->
+</head>
+
+<body class="map-page">
+    <!-- Body com classe "map-page" que aplica estilos específicos para esta página -->
+
+    <!-- HEADER - NAVEGAÇÃO -->
+    <header>
+        <!-- Barra de navegação no topo -->
+        <img class="logo" src="imagens/LogoAry'Goldia.png" alt="Logo oficial de Ary'Goldia">
+        <!-- Logo do jogo -->
+        <h1>Academia de Insurgência Ary'Goldia</h1>
+        <!-- Título principal -->
+        <nav>
+            <!-- Navegação -->
+            <ul>
+                <!-- Lista de links -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Link para home -->
+                <li><a href="login.html">Login</a></li>
+                <!-- Link para login -->
+                <li><a href="arygoldia_mapa_interativo.html">Mapa</a></li>
+                <!-- Link para esta página (você está aqui) -->
+                <li><a href="saiba-mais.html">Saiba Mais</a></li>
+                <!-- Link para saiba mais -->
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim do header -->
+
+    <!-- CONTEÚDO PRINCIPAL - MAPA INTERATIVO -->
+    <main>
+        <!-- Container principal -->
+        <section class="map-section">
+            <!-- Seção do mapa interativo -->
+            
+            <h2>Mapa Interativo de Ary'Goldia</h2>
+            <!-- Título da página -->
+            
+            <p class="intro">Clique nos marcadores do mapa para conhecer cada local da academia. A imagem usada como base aparece no canvas, e os pontos ficam ativos com descrições.</p>
+            <!-- Instruções para o usuário -->
+            
+            <div class="map-frame">
+                <!-- Container que emoldura o mapa -->
+                
+                <canvas id="cv" width="680" height="680" aria-label="Mapa interativo da Academia Ary'Goldia"></canvas>
+                <!-- Canvas onde o mapa é desenhado (elemento que permite desenhar com JavaScript) -->
+                <!-- width e height definem o tamanho interno de desenho -->
+                <!-- aria-label é para acessibilidade de leitores de tela -->
+                
+                <div id="panel">
+                    <!-- Painel de informações que aparece ao clicar em um local (inicialmente invisível) -->
+                    
+                    <div id="panel-num">1</div>
+                    <!-- Número do local clicado (círculo com número) -->
+                    
+                    <div id="panel-body">
+                        <!-- Container para as informações do local -->
+                        
+                        <div id="panel-cat"></div>
+                        <!-- Categoria do local (ex: "COMBATE", "HABITAÇÃO") -->
+                        
+                        <div id="panel-name"></div>
+                        <!-- Nome do local (ex: "Torre Arcana") -->
+                        
+                        <div id="panel-desc"></div>
+                        <!-- Descrição detalhada do local -->
+                        
+                    </div>
+                    <!-- Fim do corpo do painel -->
+                    
+                    <button id="panel-close" aria-label="Fechar">✕</button>
+                    <!-- Botão X para fechar o painel -->
+                    <!-- aria-label descreve o botão para leitores de tela -->
+                    
+                </div>
+                <!-- Fim do painel -->
+                
+            </div>
+            <!-- Fim do map-frame -->
+            
+        </section>
+        <!-- Fim da seção do mapa -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- SCRIPT GLOBAL -->
+    <script src="script.js"></script>
+    <!-- Carrega o JavaScript que controla toda a lógica do mapa interativo -->
+    <!-- Este arquivo contém: desenho do mapa, detecção de cliques, etc -->
+    
+</body>
+<!-- Fim do corpo -->
+
+</html>
+<!-- Fim do HTML -->
+

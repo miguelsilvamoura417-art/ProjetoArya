@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma como português brasileiro -->
+
+<head>
+    <!-- Seção de configuração (não visível) -->
+    <meta charset="UTF-8">
+    <!-- Define codificação UTF-8 para caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva para dispositivos móveis -->
+    <meta name="description" content="Login - Academia de Insurgência Ary'Goldia">
+    <!-- Descrição para buscadores -->
+    <meta name="author" content="Miguel Silva">
+    <!-- Identifica o autor -->
+    <title>Login - Academia de Insurgência Ary'Goldia</title>
+    <!-- Título da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importa a fonte Cinzel do Google Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa estilos globais -->
+</head>
+
+<body class="login-page">
+    <!-- Body com classe especial "login-page" para aplicar estilos diferentes nesta página -->
+
+    <!-- HEADER - NAVEGAÇÃO -->
+    <header>
+        <!-- Barra de navegação (igual em todas as páginas) -->
+        <img class="logo" src="imagens/LogoAry'Goldia.png" alt="Logo oficial de Ary'Goldia">
+        <!-- Logo do jogo -->
+        <h1>Academia de Insurgência Ary'Goldia</h1>
+        <!-- Título principal -->
+        <nav>
+            <!-- Navegação -->
+            <ul>
+                <!-- Lista de links -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Link para home -->
+                <li><a href="login.html">Login</a></li>
+                <!-- Link para esta página (você está aqui) -->
+                <li><a href="arygoldia_mapa_interativo.html">Mapa</a></li>
+                <!-- Link para mapa interativo -->
+                <li><a href="saiba-mais.html">Saiba Mais</a></li>
+                <!-- Link para saiba mais -->
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim do header -->
+
+    <!-- CONTEÚDO PRINCIPAL - FORMULÁRIO DE LOGIN -->
+    <main>
+        <!-- Container principal -->
+        <div class="login-container">
+            <!-- Caixa do formulário de login com estilo roxo -->
+            <h2>Portal de Acesso</h2>
+            <!-- Título do formulário -->
+            <form>
+                <!-- Formulário de login (elementos interativos) -->
+                
+                <!-- CAMPO 1: USUÁRIO -->
+                <div class="form-group">
+                    <!-- Grupo para organizar um campo do formulário -->
+                    <label for="usuario">Usuário da Academia:</label>
+                    <!-- Rótulo descritivo (conectado ao input pelo id) -->
+                    <input type="text" id="usuario" name="usuario" placeholder="Digite seu nome de insurgente" required>
+                    <!-- Campo de entrada de texto para username, obrigatório (required) -->
+                </div>
+                <!-- Fim do grupo de usuário -->
+
+                <!-- CAMPO 2: SENHA -->
+                <div class="form-group">
+                    <!-- Grupo para organizar o campo de senha -->
+                    <label for="senha">Senha Mágica:</label>
+                    <!-- Rótulo para o campo de senha -->
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha de acesso" required>
+                    <!-- Campo de entrada de senha (oculta caracteres), obrigatório -->
+                </div>
+                <!-- Fim do grupo de senha -->
+
+                <!-- BOTÃO DE ENVIO -->
+                <button type="submit" class="btn-login">Entrar na Academia</button>
+                <!-- Botão para submeter o formulário (enviar dados) -->
+
+                <!-- LINKS DE SUPORTE -->
+                <div class="login-footer">
+                    <!-- Container para links auxiliares no rodapé do formulário -->
+                    <p>Ainda não possui cadastro? <a href="#">Solicitar Admissão</a></p>
+                    <!-- Parágrafo com link para criar nova conta -->
+                    <p><a href="#">Recuperar senha de acesso</a></p>
+                    <!-- Link para recuperar senha esquecida -->
+                </div>
+                <!-- Fim dos links de suporte -->
+            </form>
+            <!-- Fim do formulário -->
+        </div>
+        <!-- Fim do container de login -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- SCRIPT GLOBAL -->
+    <script src="script.js"></script>
+    <!-- Carrega JavaScript global -->
+</body>
+<!-- Fim do corpo -->
+
+</html>
+<!-- Fim do HTML -->

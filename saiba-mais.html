@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 para navegadores modernos -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português brasileiro -->
+
+<head>
+    <!-- Começo da seção de configuração da página (não visível) -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentos e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva em dispositivos móveis -->
+    <meta name="description" content="Saiba Mais - Academia de Insurgência Ary'Goldia">
+    <!-- Descrição da página para buscadores (SEO) -->
+    <meta name="author" content="Miguel Silva">
+    <!-- Identifica o autor da página -->
+    <title>Saiba Mais - Academia de Insurgência Ary'Goldia</title>
+    <!-- Define o título que aparece na aba do navegador -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importa a fonte "Cinzel" do Google Fonts com pesos 400 (normal) e 700 (bold) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo de estilos global (style.css) -->
+    <style>
+        /* Estilos específicos desta página (internos) */
+        
+        .saiba-mais-section {
+            /* Container principal que centraliza o conteúdo */
+            padding: 40px 20px; /* Espaço interno: 40px em cima/baixo, 20px nas laterais */
+            max-width: 1000px; /* Largura máxima do container */
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+
+        .saiba-mais-section h2 {
+            /* Estilo do título principal da seção */
+            color: #e0d5ff; /* Cor roxa clara */
+            font-size: 32px; /* Tamanho do texto */
+            margin-bottom: 30px; /* Espaço abaixo do título */
+            text-align: center; /* Centraliza o texto */
+            border-bottom: 2px solid #8b5fbf; /* Linha roxa abaixo */
+            padding-bottom: 20px; /* Espaço interno abaixo */
+        }
+
+        .info-card {
+            /* Estilo dos cartões de informação */
+            background: linear-gradient(135deg, rgba(50, 30, 80, 0.8), rgba(100, 50, 150, 0.8));
+            /* Fundo com gradiente roxo diagonal (semi-transparente) */
+            border-left: 4px solid #d0a0ff; /* Borda roxa à esquerda */
+            border-radius: 8px; /* Cantos arredondados */
+            padding: 25px; /* Espaço interno */
+            margin-bottom: 25px; /* Espaço abaixo de cada cartão */
+            transition: all 0.3s ease; /* Transição suave de 0.3s para efeitos */
+        }
+
+        .info-card:hover {
+            /* Efeito quando o mouse passa sobre o cartão */
+            transform: translateX(5px); /* Move 5px para a direita */
+            box-shadow: 0 5px 20px rgba(208, 160, 255, 0.2);
+            /* Adiciona sombra roxa para destaque */
+        }
+
+        .info-card h3 {
+            /* Estilo dos títulos dentro dos cartões */
+            color: #d0a0ff; /* Cor roxa */
+            font-size: 22px; /* Tamanho do texto */
+            margin-bottom: 15px; /* Espaço abaixo */
+        }
+
+        .info-card p {
+            /* Estilo dos parágrafos dentro dos cartões */
+            color: #b0a0d0; /* Cor roxa mais clara */
+            line-height: 1.8; /* Espaço entre linhas para melhor leitura */
+            font-size: 15px; /* Tamanho do texto */
+        }
+
+        .info-card ul {
+            /* Estilo das listas dentro dos cartões */
+            color: #b0a0d0; /* Cor roxa */
+            margin: 15px 0 0 20px; /* Espaçamento e indentação */
+        }
+
+        .info-card li {
+            /* Estilo de cada item da lista */
+            margin-bottom: 10px; /* Espaço entre itens */
+            line-height: 1.6; /* Espaço entre linhas */
+        }
+
+        .destaque {
+            /* Estilo dos cartões destacados */
+            background: linear-gradient(135deg, rgba(208, 160, 255, 0.2), rgba(139, 95, 191, 0.2));
+            /* Fundo com gradiente roxo diagonal (mais transparente) */
+            border: 2px solid #d0a0ff; /* Borda roxa em todos os lados */
+            border-radius: 8px; /* Cantos arredondados */
+            padding: 20px; /* Espaço interno */
+            margin: 30px 0; /* Espaço acima e abaixo */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .destaque h3 {
+            /* Estilo dos títulos destacados */
+            color: #d0a0ff; /* Cor roxa */
+            font-size: 20px; /* Tamanho do texto */
+            margin-bottom: 15px; /* Espaço abaixo */
+        }
+
+        .destaque p {
+            /* Estilo dos parágrafos destacados */
+            color: #e0d5ff; /* Cor roxa clara */
+            font-size: 16px; /* Tamanho do texto */
+        }
+    </style>
+    <!-- Fim da seção de estilos internos -->
+</head>
+<!-- Fim da seção head -->
+
+<body>
+    <!-- Corpo da página (conteúdo visível) -->
+
+    <!-- HEADER - Início -->
+    <header>
+        <!-- Barra de navegação no topo da página -->
+        <img class="logo" src="imagens/LogoAry'Goldia.png" alt="Logo oficial de Ary'Goldia">
+        <!-- Logo do jogo com texto alternativo para acessibilidade -->
+        <h1>Academia de Insurgência Ary'Goldia</h1>
+        <!-- Título principal da página -->
+        <nav>
+            <!-- Navegação principal -->
+            <ul>
+                <!-- Lista de links de navegação -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Link para a página inicial -->
+                <li><a href="login.html">Login</a></li>
+                <!-- Link para a página de login -->
+                <li><a href="arygoldia_mapa_interativo.html">Mapa</a></li>
+                <!-- Link para o mapa interativo -->
+                <li><a href="saiba-mais.html">Saiba Mais</a></li>
+                <!-- Link para esta página (saiba-mais) -->
+            </ul>
+        </nav>
+    </header>
+    <!-- HEADER - Fim -->
+
+    <!-- MAIN CONTENT - Início -->
+    <main>
+        <!-- Container principal de conteúdo -->
+        <section class="saiba-mais-section">
+            <!-- Seção de informações sobre o jogo -->
+            <h2>Saiba Mais sobre Ary'Goldia</h2>
+            <!-- Título da seção -->
+
+            <!-- CARTÃO 1: A História -->
+            <div class="info-card">
+                <!-- Cartão com informações sobre a história -->
+                <h3>📖 A História</h3>
+                <!-- Título com ícone de livro -->
+                <p>
+                    <!-- Parágrafo com contexto do jogo -->
+                    Em 1954, num período de turbulência política e mágica global, A aluna chegou a academia de Insurgência 
+                    Ary'Goldia em busca de um sentido a suas duvidas. Este lugar singular forma jovens prodígios para desafiar as antigas ordens 
+                    estabelecidas e remodelar o destino do mundo através da magia e da coragem. A academia existe numa 
+                    dimensão mágica, oculta dos olhos humanos comuns.
+                </p>
+            </div>
+
+            <!-- CARTÃO 2: O Jogo -->
+            <div class="info-card">
+                <!-- Cartão com informações sobre o jogo -->
+                <h3>🎮 O Jogo</h3>
+                <!-- Título com ícone de controle -->
+                <p>
+                    <!-- Introdução sobre o tipo de jogo -->
+                    Academia de Insurgência Ary'Goldia é um RPG pixelado clássico que combina:
+                </p>
+                <ul>
+                    <!-- Lista de características do jogo -->
+                    <li><strong>Exploração Livre:</strong> Descubra segredos e locações ocultas na academia</li>
+                    <!-- Característica 1: exploração -->
+                    <li><strong>Combate em Turno:</strong> Sistema estratégico de batalha com runas mágicas</li>
+                    <!-- Característica 2: combate -->
+                    <li><strong>Progressão de Personagem:</strong> Desenvolva suas habilidades quanto mais as usa</li>
+                    <!-- Característica 3: progressão -->
+                    <li><strong>Diálogos Profundos:</strong> Personagens com histórias complexas e motivações próprias</li>
+                    <!-- Característica 4: diálogos -->
+                    <li><strong>Quebra-cabeças Arcanos:</strong> Desafios intelectuais que exigem compreensão da lógica</li>
+                    <!-- Característica 5: puzzles -->
+                </ul>
+            </div>
+
+            <!-- CARTÃO 3: Sistema de Magia -->
+            <div class="info-card">
+                <!-- Cartão explicando o sistema mágico -->
+                <h3>✨ Sistema de Magia</h3>
+                <!-- Título com ícone de magia -->
+                <p>
+                    <!-- Explicação do sistema de runas -->
+                    O sistema mágico de Ary'Goldia é baseado em runas e suas especialidades. Cada insurgente pode 
+                    aprender runas de múltiplas especialidades, combinando-as de formas únicas e criativas. As escolhas 
+                    que você faz determinam não apenas seu poder, mas também sua posição ideológica na academia.
+                </p>
+            </div>
+
+            <!-- CARTÃO DESTACADO 1: Característica Especial -->
+            <div class="destaque">
+                <!-- Cartão destacado com informação importante -->
+                <h3>⚡ Característica Especial</h3>
+                <!-- Título destacado -->
+                <p>
+                    <!-- Destaque sobre escolhas no jogo -->
+                    Suas ações e escolhas moldadas pela ideologia definem o final do jogo. Há múltiplos caminhos 
+                    e finais baseados em suas decisões morais e alianças políticas.
+                </p>
+            </div>
+
+            <!-- CARTÃO 4: Personagens Principais -->
+            <div class="info-card">
+                <!-- Cartão sobre personagens -->
+                <h3>👥 Personagens Principais</h3>
+                <!-- Título com ícone de pessoas -->
+                <p>
+                    <!-- Introdução sobre personagens -->
+                    Encontre e relacione-se com personagens memoráveis, cada um com:
+                </p>
+                <ul>
+                    <!-- Lista de características dos personagens -->
+                    <li>Histórias de vida únicas e complexas</li>
+                    <li>Objetivos e segredos pessoais</li>
+                    <li>Relacionamentos afetados por suas ações</li>
+                    <li>Papel importante na trama central</li>
+                </ul>
+            </div>
+
+            <!-- CARTÃO 5: Objetivos do Jogo -->
+            <div class="info-card">
+                <!-- Cartão listando objetivos -->
+                <h3>🎯 Objetivos do Jogo</h3>
+                <!-- Título com ícone de alvo -->
+                <p>
+                    <!-- Introdução aos objetivos -->
+                    Como um nova insurgente, você enfrentará desafios crescentes:
+                </p>
+                <ul>
+                    <!-- Lista de objetivos do jogo -->
+                    <li>Dominar as artes mágicas e técnicas de combate</li>
+                    <li>Desvendar os segredos sombrios da academia</li>
+                    <li>Tomar uma posição sobre o conflito central</li>
+                    <li>Determinar o futuro de Ary'Goldia e do mundo!</li>
+                </ul>
+            </div>
+
+            <!-- CARTÃO DESTACADO 2: Experiência Esperada -->
+            <div class="destaque">
+                <!-- Cartão destacado com informação sobre gameplay -->
+                <h3>🌟 Experiência Esperada</h3>
+                <!-- Título destacado -->
+                <p>
+                    <!-- Destaque sobre duração e qualidade -->
+                    Prepare-se para 30-50 horas de gameplay imersivo, repleto de escolhas significativas, 
+                    combates estratégicos e uma história que se adapta às suas decisões.
+                </p>
+            </div>
+
+            <!-- CARTÃO 6: Tecnologia -->
+            <div class="info-card">
+                <!-- Cartão sobre tecnologia do jogo -->
+                <h3>💻 Tecnologia</h3>
+                <!-- Título com ícone de computador -->
+                <p>
+                    <!-- Descrição técnica do jogo -->
+                    Desenvolvido com dedicação à estética pixel art retrô, o jogo oferece uma experiência nostálgica 
+                    com mecânicas modernas. A trilha sonora original é inspirada em música clássica e contemporânea, 
+                    criando uma atmosfera verdadeiramente única.
+                </p>
+            </div>
+        </section>
+        <!-- Fim da seção de informações -->
+    </main>
+    <!-- FIM MAIN CONTENT -->
+
+    <!-- Script externo -->
+    <script src="script.js"></script>
+    <!-- Carrega o arquivo JavaScript global (script.js) -->
+</body>
+<!-- Fim do corpo da página -->
+
+</html>
+<!-- Fim do documento HTML -->
