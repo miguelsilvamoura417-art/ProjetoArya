@@ -1,125 +1,202 @@
 <!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 para navegadores modernos -->
 <html lang="pt-BR">
+<!-- Define o idioma como português brasileiro -->
 
 <head>
-    <!-- Configurações básicas -->
+    <!-- Início da seção de configuração (não visível) -->
+    
+    <!-- CONFIGURAÇÕES BÁSICAS DE METADADOS -->
     <meta charset="UTF-8">
+    <!-- Define codificação UTF-8 para suportar acentos e caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva para dispositivos móveis -->
 
-    <!-- SEO básico -->
+    <!-- CONFIGURAÇÕES SEO (Search Engine Optimization) -->
     <meta name="description"
         content="Academia de Insurgência Ary'Goldia - Um RPG pixelado clássico ambientado em uma academia de magia em 1954.">
+    <!-- Descrição do site para buscadores (Google, Bing, etc) -->
     <meta name="keywords" content="RPG, Ary'Goldia, Academia de Insurgência, jogo pixelado, fantasia">
+    <!-- Palavras-chave para indexação por buscadores -->
     <meta name="author" content="Miguel Silva">
+    <!-- Identifica o criador/autor do site -->
 
-    <!-- Título -->
+    <!-- TÍTULO DA PÁGINA -->
     <title>Academia de Insurgência Ary'Goldia</title>
+    <!-- Título que aparece na aba do navegador e nos resultados de busca -->
 
-    <!-- Fonte temática -->
+    <!-- IMPORTAÇÃO DE FONTES -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Carrega a fonte "Cinzel" do Google Fonts com pesos 400 (normal) e 700 (bold) -->
 
-    <!-- CSS -->
+    <!-- IMPORTAÇÃO DE ESTILOS GLOBAIS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Carrega o arquivo de estilos externo (style.css) para toda a página -->
 </head>
+<!-- Fim da seção head (configuração) -->
 
 <body>
+    <!-- Início do corpo da página (conteúdo visível) -->
 
     <!-- =========================================
-         HEADER PRINCIPAL
+         HEADER (CABEÇALHO/NAVEGAÇÃO)
          ========================================= -->
     <header>
-
-        <!-- Logo -->
+        <!-- Barra de navegação no topo de todas as páginas -->
+        
+        <!-- LOGO -->
         <img class="logo" src="imagens/LogoAry'Goldia.png" alt="Logo oficial de Ary'Goldia">
+        <!-- Logo do jogo com texto alternativo para acessibilidade -->
 
-        <!-- Título -->
+        <!-- TÍTULO PRINCIPAL -->
         <h1>Academia de Insurgência Ary'Goldia</h1>
+        <!-- Título principal do site que aparece em todas as páginas -->
 
-        <!-- Navegação -->
+        <!-- NAVEGAÇÃO PRINCIPAL -->
         <nav>
+            <!-- Elemento de navegação semântico -->
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Mapa</a></li>
-                <li><a href="#">Saiba Mais</a></li>
+                <!-- Lista desordenada com links de navegação -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Link para a página inicial (você está aqui) -->
+                <li><a href="login.html">Login</a></li>
+                <!-- Link para a página de login -->
+                <li><a href="arygoldia_mapa_interativo.html">Mapa</a></li>
+                <!-- Link para o mapa interativo do jogo -->
+                <li><a href="saiba-mais.html">Saiba Mais</a></li>
+                <!-- Link para página com mais informações sobre o jogo -->
             </ul>
         </nav>
-
     </header>
+    <!-- Fim do header -->
 
     <!-- =========================================
          CONTEÚDO PRINCIPAL
          ========================================= -->
     <main>
+        <!-- Container principal de conteúdo da página -->
 
-        <!-- CARROSSEL -->
+        <!-- SEÇÃO 1: CARROSSEL DE IMAGENS -->
         <section class="carrossel">
+            <!-- Seção com imagens que passam automaticamente -->
 
             <div class="slides">
+                <!-- Container das imagens do carrossel -->
 
+                <!-- IMAGEM 1 DO CARROSSEL -->
                 <img src="imagens/carrosel1.png" class="slide active" alt="Entrada da Academia Ary'Goldia">
+                <!-- Primeira imagem (ativa por padrão), a que aparece quando carrega a página -->
 
+                <!-- IMAGEM 2 DO CARROSSEL -->
                 <img src="imagens/carrosel2.png" class="slide" alt="Sala de aula mágica da academia">
+                <!-- Segunda imagem que rotaciona automaticamente -->
 
+                <!-- IMAGEM 3 DO CARROSSEL -->
                 <img src="imagens/carrosel3.png" class="slide" alt="Cidade acadêmica de Ary'Goldia">
+                <!-- Terceira imagem que completa o ciclo -->
 
             </div>
+            <!-- Fim do container de slides -->
 
-            <!-- Botões opcionais para futura navegação -->
+            <!-- BOTÃO ANTERIOR (esquerda) -->
             <button class="prev">&#10094;</button>
+            <!-- Botão para voltar à imagem anterior manualmente (seta ◄) -->
+            
+            <!-- BOTÃO PRÓXIMO (direita) -->
             <button class="next">&#10095;</button>
+            <!-- Botão para avançar à próxima imagem manualmente (seta ►) -->
 
         </section>
+        <!-- Fim do carrossel -->
 
+        <!-- SEÇÃO 2: CHAMADA COM IMAGENS -->
         <section class="chamada">
+            <!-- Seção promocional com imagens e descrições -->
+            
             <h2>O Mundo Vivo de Ary'Goldia</h2>
+            <!-- Título da seção -->
+            
             <div class="imagens">
+                <!-- Container que agrupa as imagens de promoção -->
+                
+                <!-- CARD 1: COMBATE -->
                 <div class="imagem-container">
+                    <!-- Primeiro card com imagem e texto -->
                     <img src="imagens/imagem1.png" alt="Cena de batalha mágica">
+                    <!-- Imagem do card (combate) -->
                     <p>Batalhas em turno com elementos mágicos, sistema de combate dinâmico. Explore o combate e
                         descubra estratégias únicas e demonstre ser o maior insurgente que já pisou na academia.</p>
+                    <!-- Descrição sobre combate no jogo -->
                 </div>
+                <!-- Fim do card 1 -->
+                
+                <!-- CARD 2: PERSONAGENS -->
                 <div class="imagem-container">
+                    <!-- Segundo card com imagem e texto -->
                     <img src="imagens/imagem2.png" alt="Conversa sobre magia">
+                    <!-- Imagem do card (personagens) -->
                     <p>Converse com personagens fascinantes e desvende os segredos da academia. A busca pelo
                         conhecimento e magia pode se demonstrar algo misterioso, mas fascinante.</p>
+                    <!-- Descrição sobre interação com personagens -->
                 </div>
+                <!-- Fim do card 2 -->
+                
             </div>
+            <!-- Fim do container de imagens -->
         </section>
+        <!-- Fim da seção chamada -->
 
-        <!-- LORE / HISTÓRIA -->
+        <!-- SEÇÃO 3: LORE / HISTÓRIA -->
         <section class="lore">
+            <!-- Seção com informações sobre a história e lore do jogo -->
+            
             <h2>O Legado de Ary'Goldia</h2>
+            <!-- Título da seção de lore -->
 
             <p>
+                <!-- Parágrafo com contexto histórico -->
                 No ano de 1954, em meio a segredos arcanos, conflitos ideológicos e magia proibida,
                 a Academia de Insurgência Ary'Goldia forma jovens prodígios destinados a desafiar
                 antigas ordens e remodelar o destino do mundo.
             </p>
         </section>
+        <!-- Fim da seção lore -->
 
-        <!-- MAPA / FUTURO -->
+        <!-- SEÇÃO 4: MAPA (Espaço reservado) -->
         <section class="mapa">
+            <!-- Seção reservada para mapa/exploração -->
             <h2>Explore o Mundo</h2>
+            <!-- Título indicando funcionalidade futura -->
         </section>
+        <!-- Fim da seção mapa -->
 
-        <!-- SAIBA MAIS -->
+        <!-- SEÇÃO 5: SAIBA MAIS (Espaço reservado) -->
         <section class="sobre">
+            <!-- Seção reservada para mais informações -->
             <h2>Descubra os Mistérios</h2>
+            <!-- Título indicando funcionalidade futura -->
         </section>
+        <!-- Fim da seção sobre -->
 
     </main>
+    <!-- Fim do conteúdo principal -->
 
     <!-- =========================================
          RODAPÉ
          ========================================= -->
     <footer>
+        <!-- Seção rodapé no final da página -->
         <p>© 2026 Academia de Insurgência Ary'Goldia — Todos os direitos reservados.</p>
+        <!-- Texto de copyright e direitos autorais -->
     </footer>
+    <!-- Fim do rodapé -->
 
-    <!-- JavaScript -->
+    <!-- IMPORTAÇÃO DE JAVASCRIPT GLOBAL -->
     <script src="script.js"></script>
+    <!-- Carrega o arquivo JavaScript externo que controla a lógica do carrossel e outras interações -->
 
 </body>
+<!-- Fim do corpo da página -->
 
 </html>
+<!-- Fim do documento HTML -->
